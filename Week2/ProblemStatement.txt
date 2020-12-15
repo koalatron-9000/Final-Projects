@@ -13,3 +13,14 @@ Use the Python OS module to process a directory of text files
 Manage information stored in Python dictionaries
 Use the Python requests module to upload content to a running Web service
 Understand basic operations for Python requests like GET and POST methods
+
+Requirements:
+OS library
+Requests library
+JSON library
+(can I replace OS with Glob?)
+script name:"run.py"
+
+I need to import all .txt files and map them to dictionaries.
+from there i'll encode them with JSON
+the use PUT from requests to send the data to the website.
