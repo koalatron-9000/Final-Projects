@@ -21,3 +21,9 @@ Generate a PDF using Python
 Automatically send a PDF by email  
 Write a script to check the health status of the system  
 
+I need to resize and convert images, So I'll use PIL.
+I need to send stuff to a website so I'll use Requests
+I need to make a PDF so I'll use ReportLab
+I need to build and send an email so I'll use smtplib & email. *Seems a bit on the nose. lol*
+I need to monitor CPU usage, disk space, available memory and name resolution, so I'll use shutil & psutil
+
