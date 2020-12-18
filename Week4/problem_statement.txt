@@ -27,3 +27,51 @@ I need to make a PDF so I'll use ReportLab
 I need to build and send an email so I'll use smtplib & email. *Seems a bit on the nose. lol*
 I need to monitor CPU usage, disk space, available memory and name resolution, so I'll use shutil & psutil
 
+Files the project is looking for:
+changeImage.py:
+	change image from 3000X2000 to 600X400. 
+	and change image format from .TIFF to .JPEG.
+	convert from RGBA to RGB.
+	images will be in "/supplier-data/images/".
+	import PIL
+supplier_image_upload.py:
+	upload images from "/supplier-data/images/" to the website.
+	use example_upload.py as a base for this file.
+	url will be [linux-instance-IP-Address]/upload
+	import requests
+run.py:
+	process each text file into the format below and push it to the website.
+	remove "lbs" from the weight and turn into an integer
+	format will be: {"name": "Test Fruit", "weight": 100, "description": "This is the description of my test fruit", "image_name": "icon.sheet.png"}
+	url will be http://[linux-instance-external-IP]/fruits
+	import os
+	import requests
+reports.py:
+	this will take the .txt files in "/supplier-data/descriptions/"
+	it will use the name and weight lines from each text file.
+	it will build this into a PDF file.
+	must have a function called "generate_report"
+	PDF file must be named "processed.pdf"
+	import reportlab
+report_email.py:
+	import os
+	import datetime
+	import reports (my reports.py)
+	imports emails (my emails.py)
+	use dunder main to call the generate_report function from reports.py
+	reports.generate_report(attachment, title, paragraph)
+	attachment = "/tmp/processed.pdf"
+emails.py:
+	this will have the functionality to build an email and send it.
+	must have "generate_email" and "send_email" functions
+	
+health_check.py
+	report an error if CPU usage is over 80%
+	report an error if available disk space is lower than 20%
+	report an error if available memory is less than 500MB
+	report an error if hostname "localhost" cannot be resolved to "127.0.0.1"
+	emails if there are any issues.
+	install and use "stress" to test the functionality.
+	set up a cron job to run health_check.py every 60 seconds.
+	import shutil
+	import psutil
