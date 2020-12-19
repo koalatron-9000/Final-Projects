@@ -14,8 +14,7 @@ for each in reviews:
     with open(each, "r") as f:
         ReadData = list(f)
         payload = {"name":str(ReadData[0]).replace("\n",""),
-        "weight":str(ReadData[1][:-4]).replace("\n",""),
+        "weight":int(str(ReadData[1][:-4]).replace("\n","")),
         "description":str(ReadData[2:]).replace("\n","")}
         r = requests.post("http://[linux-instance-external-IP]/fruits", data=payload)
         print(r)
-        
