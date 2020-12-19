@@ -34,12 +34,12 @@ changeImage.py: DONE!
 	convert from RGBA to RGB.
 	images will be in "/supplier-data/images/".
 	import PIL
-supplier_image_upload.py:
+supplier_image_upload.py: DONE!
 	upload images from "/supplier-data/images/" to the website.
 	use example_upload.py as a base for this file.
 	url will be [linux-instance-IP-Address]/upload
 	import requests
-run.py:
+run.py: DONE!
 	process each text file into the format below and push it to the website.
 	remove "lbs" from the weight and turn into an integer
 	format will be: {"name": "Test Fruit", "weight": 100, "description": "This is the description of my test fruit", "image_name": "icon.sheet.png"}
