@@ -28,7 +28,7 @@ I need to build and send an email so I'll use smtplib & email. *Seems a bit on t
 I need to monitor CPU usage, disk space, available memory and name resolution, so I'll use shutil & psutil
 
 Files the project is looking for:
-changeImage.py:
+changeImage.py: DONE!
 	change image from 3000X2000 to 600X400. 
 	and change image format from .TIFF to .JPEG.
 	convert from RGBA to RGB.
